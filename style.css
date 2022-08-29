@@ -128,68 +128,69 @@ header input {
 }
 
 .center-box {
-  margin-top: 1rem;
+  margin-top: -5rem;
   margin-left: 2rem;
   grid-area:  2 / 3 / 6 / 5;
   display: grid;
 }
 
-
-
-.project-holder {
-  display: grid;
-  grid-template-rows: 4rem 1fr;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
- .project-holder h1 {
+.center-box * > h1 {
   grid-column: 1 / 3;
   font-weight: 800;
+}
+
+.center-box * > .card {
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 2px 10px 10px #cdd2da;
+  height: 24rem;
+  width: 15rem;
+}
+
+.center-box .project-holder, .right-holder {
+  display: grid;
+  gap: 2rem;
+  grid-row: 1 / 10;
+
+}
+
+.project-holder {
+  grid-template-rows: 4rem 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / 4;
+}
+
+.right-holder{
+  margin-left: 2rem;
+  grid-column: 4 / 9;
+  grid-template-rows: 4rem 40% 4rem 40%;
+}
+
+.project-holder .card {
+  color: #444;
+  border-left: 8px solid var(--side-yellow);
+  width: 23rem;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .project-holder h2 {
   font-weight: 800
 }
 
-.project-holder .card {
-  color: #444;
-  border-radius: 8px;
-  border-left: 8px solid var(--side-yellow);
-  background-color: #ffffff;
-  width: 23rem;
-  height: 24rem;
-  padding: 10px;
+
+
+.right-holder #trending, .right-holder #announcements {
+  padding: 20px;
   box-sizing: border-box;
-  box-shadow: 2px 10px 10px #cdd2da;
 }
 
-.right-holder{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 2rem;
-  grid-area:  2 / 10 / 6 / 14;
+.right-holder #trending {
   display: grid;
-  grid-template-rows: 4rem 40% 4rem 40%;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  grid-template-rows: repeat(4, 1fr);
+
 }
 
-.right-holder .card {
-  border-radius: 8px;
-  background-color: #ffffff;    
-  box-shadow: 2px 10px 10px #cdd2da;
-  height: 100%;
-}
-
-.right-holder #announcements{
-  padding: 40px;
-  box-sizing: border-box;
-}
-
-.right-holder h1 {
-  margin-top: 2.5rem;
-}
 
 .right-holder #announcements span{
   display: block;
@@ -201,21 +202,18 @@ header input {
   color: #444;
 }
 
-.right-holder hr {
-  color: #cdd2da;
-}
-
 .right-holder #announcements h2{ 
   margin: 0;
   font-weight: 900;
   font-size: 1.3rem;
 }
 
-.right-holder #trending {
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  align-items: center;
-  padding: 20px;
+.right-holder hr {
+  color: #cdd2da;
+}
+
+.right-holder #trending, .right-holder h1.trending {
+  margin-top: -8rem;
 }
 
 #trending .trend-link {
