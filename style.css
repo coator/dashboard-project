@@ -128,7 +128,6 @@ header input {
 }
 
 .center-box {
-  margin-top: -5rem;
   margin-left: 2rem;
   grid-area:  2 / 3 / 6 / 5;
   display: grid;
@@ -143,27 +142,17 @@ header input {
   border-radius: 8px;
   background-color: #ffffff;
   box-shadow: 2px 10px 10px #cdd2da;
-  height: 24rem;
-  width: 15rem;
 }
 
 .center-box .project-holder, .right-holder {
   display: grid;
   gap: 2rem;
-  grid-row: 1 / 10;
-
 }
 
 .project-holder {
   grid-template-rows: 4rem 1fr;
   grid-template-columns: 1fr 1fr;
   grid-column: 1 / 4;
-}
-
-.right-holder{
-  margin-left: 2rem;
-  grid-column: 4 / 9;
-  grid-template-rows: 4rem 40% 4rem 40%;
 }
 
 .project-holder .card {
@@ -178,7 +167,10 @@ header input {
   font-weight: 800
 }
 
-
+.right-holder{
+  margin-left: 2rem;
+  grid-column: 4 / 9;
+}
 
 .right-holder #trending, .right-holder #announcements {
   padding: 20px;
@@ -190,7 +182,6 @@ header input {
   grid-template-rows: repeat(4, 1fr);
 
 }
-
 
 .right-holder #announcements span{
   display: block;
@@ -213,7 +204,7 @@ header input {
 }
 
 .right-holder #trending, .right-holder h1.trending {
-  margin-top: -8rem;
+  grid-row: 3 / 6;
 }
 
 #trending .trend-link {
