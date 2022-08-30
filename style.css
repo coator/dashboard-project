@@ -18,7 +18,6 @@ body {
   padding: 10px;
   display: grid;
   grid-column: 1 / 3;
-  grid-row: 1 / 7;
   background-color: #1992d4 ;
   color: #ffffff;
 
